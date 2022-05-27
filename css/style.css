@@ -30,6 +30,9 @@ header {
 ul.navigation {
   display: flex;
   margin-left: auto;
+  padding-inline-start: 0px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
 }
 
 .navigation > li {
@@ -40,6 +43,13 @@ ul.navigation {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 4rem;
+}
+.hero h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 [col-*] {
@@ -47,14 +57,14 @@ ul.navigation {
   flex-direction: column;
 }
 
-img.hero {
+.hero img {
   max-height: 25vh;
   border-radius: 1rem;
 }
 
 img.logo {
   max-height: 64px;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 img.avatar {
@@ -78,7 +88,7 @@ img.avatar:hover {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-content: center;
+  align-content: flex-start;
   gap: 1rem;
 }
 
@@ -115,14 +125,73 @@ article img {
 .cta {
   display: flex;
   justify-content: space-around;
+  margin: 1rem 5rem;
+  padding: 2rem 0;
+  border: #333 solid 1px;
+  border-radius: 1rem;
+  background-image: radial-gradient(
+      circle,
+      rgba(236, 236, 236, 0.446),
+      rgb(255, 255, 255)
+    ),
+    url(../img/dough.jpg);
 }
 
 .cta-text {
   display: flex;
   flex-direction: column;
 }
+.cta-text p,
+.cta-text h3 {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+button {
+  border: burlywood solid 2px;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
 
 footer {
+  padding: 1rem;
   display: flex;
   justify-content: center;
+  border-top: #ccc solid;
+}
+
+@media all and (max-width: 600px) {
+  header {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  ul.navigation {
+    margin-left: 0;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .hero img {
+    border-radius: 0;
+    max-height: initial;
+    max-width: 100%;
+    display: none;
+  }
+
+  .hero {
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 1rem;
+    gap: 0px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.11),
+        rgba(238, 238, 238, 0.603)
+      ),
+      url(../img/Hero.jpg);
+    background-size: 800px;
+  }
+  .container {
+    padding: 0;
+  }
 }
