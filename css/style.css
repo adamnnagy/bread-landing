@@ -129,12 +129,7 @@ article img {
   padding: 2rem 0;
   border: #333 solid 1px;
   border-radius: 1rem;
-  background-image: radial-gradient(
-      circle,
-      rgba(236, 236, 236, 0.446),
-      rgb(255, 255, 255)
-    ),
-    url(../img/dough.jpg);
+  background: #ebcfbb;
 }
 
 .cta-text {
@@ -148,9 +143,20 @@ article img {
 }
 
 button {
+  background: #fff;  
   border: burlywood solid 2px;
   border-radius: 5px;
-  padding: 0.5rem;
+  padding: 1rem;
+}
+
+button::first-line {
+    font-weight: bold;
+}
+
+button:hover {
+    -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 footer {
@@ -167,6 +173,10 @@ footer {
   }
   ul.navigation {
     margin-left: 0;
+  }
+  .cta {
+      flex-direction: column;
+      align-items: center;
   }
 }
 
