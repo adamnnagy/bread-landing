@@ -41,9 +41,9 @@ ul.navigation {
 
 .hero {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 4rem;
+  gap: 1rem;
 }
 .hero h1 {
   font-size: 60px;
@@ -55,10 +55,12 @@ ul.navigation {
 [col-*] {
   display: flex;
   flex-direction: column;
+  /* padding: 2rem; */
 }
 
 .hero img {
-  max-height: 25vh;
+  object-fit: cover;
+  height: 260px;
   border-radius: 1rem;
 }
 
